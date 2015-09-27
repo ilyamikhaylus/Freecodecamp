@@ -10,14 +10,9 @@ String.toLowerCase()
 */
 
 function palindrome(str) {
-  var replaced = str.replace(/[ .,]/g,'').toLowerCase(); // remove punctuation and turn everything lower case
-  var replacedReverse = replaced.split("").reverse().join(""); // reverse text to check spelling
-
-  if (replacedReverse == replaced){
-    return true;
-  }else{
-    return false;
-  }
+  var formatedStr = str.replace(/[\W_]/g, '').toLowerCase();
+  var reverseStr = normalizedStr.split('').reverse().join('');
+  return normalizedStr === reverseStr;
 }
 
 palindrome("A man, a plan, a canal. Panama");
