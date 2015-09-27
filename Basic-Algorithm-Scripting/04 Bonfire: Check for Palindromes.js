@@ -11,8 +11,8 @@ String.toLowerCase()
 
 function palindrome(str) {
   var formatedStr = str.replace(/[\W_]/g, '').toLowerCase();
-  var reverseStr = normalizedStr.split('').reverse().join('');
-  return normalizedStr === reverseStr;
+  var reverseStr = formatedStr.split('').reverse().join('');
+  return formatedStr === reverseStr;
 }
 
 palindrome("A man, a plan, a canal. Panama");
